@@ -86,6 +86,7 @@ function displayToys(toy) {
   const toyButton = document.createElement('button');
   toyButton.className = "like-btn";
   toyButton.textContent = "Like <3";
+  toyButton.setAttribute('id', `${toy.id}`)
   toyButton.addEventListener('click', function(event) {
     event.preventDefault();
     updateLike(event);
