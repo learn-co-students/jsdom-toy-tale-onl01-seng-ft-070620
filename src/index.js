@@ -53,7 +53,6 @@ function addNewToy(toy) {
 function updateLike(event) {
   event.preventDefault();
   let numLikes = parseInt(event.target.previousElementSibling.innerText) + 1;
-  debugger
   fetch(`http://localhost:3000/toys/${event.target.id}`, {
     method: "PATCH",
     headers: {
