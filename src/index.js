@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     addToy = !addToy;
     if (addToy) {
       toyFormContainer.style.display = "block";
-      toyFormContainer.addEventListener('submit', event => {
+      const toyForm = document.querySelector('.add-toy-form')
+      toyForm.addEventListener('submit', event => {
         event.preventDefault();
         addNewToy(event.target);
       })
@@ -87,7 +88,6 @@ function displayToys(toy) {
   toyButton.textContent = "Like <3";
   toyButton.setAttribute('id', `${toy.id}`)
   toyButton.addEventListener('click', function(event) {
-    event.preventDefault();
     updateLike(event);
   });
   newDiv.appendChild(toyName);
