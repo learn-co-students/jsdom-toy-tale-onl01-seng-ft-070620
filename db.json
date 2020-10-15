@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Woody",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Woody-PNG-Photos.png",
-      "likes": 5
+      "likes": 6
     },
     {
       "id": 2,
@@ -22,7 +22,7 @@
       "id": 4,
       "name": "Slinky Dog",
       "image": "https://www.freeiconspng.com/uploads/slinky-png-transparent-1.png",
-      "likes": 4
+      "likes": 6
     },
     {
       "id": 5,
@@ -46,7 +46,34 @@
       "id": 8,
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
-      "likes": -2
+      "likes": -1
+    },
+    {
+      "name": "Tommy",
+      "imageUrl": "https://vignette.wikia.nocookie.net/p__/images/8/88/Jessie_Toy_Story_3.png/revision/latest?cb=20161023024601&path-prefix=protagonist",
+      "id": 9
+    },
+    {
+      "name": "Billy",
+      "imageUrl": "",
+      "id": 10
+    },
+    {
+      "name": "Billy",
+      "imageUrl": "https://vignette.wikia.nocookie.net/p__/images/8/88/Jessie_Toy_Story_3.png/revision/latest?cb=20161023024601&path-prefix=protagonist",
+      "id": 11
+    },
+    {
+      "name": "Billy",
+      "imageUrl": "",
+      "likes": "0",
+      "id": 12
+    },
+    {
+      "name": "Sally",
+      "imageUrl": "https://vignette.wikia.nocookie.net/p__/images/8/88/Jessie_Toy_Story_3.png/revision/latest?cb=20161023024601&path-prefix=protagonist",
+      "likes": 0,
+      "id": 13
     }
   ]
 }
