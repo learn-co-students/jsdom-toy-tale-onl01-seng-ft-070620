@@ -44,14 +44,20 @@ function renderToys (toy) {
 
   let btn = document.createElement('button')
   btn.classList.add("like-btn")
+  btn.id = toy.id
   btn.innerText = "Like <3"
+  btn.addEventListener('click', (event) => {
+    // debugger
+    // console.log(event.target.dataset)
+    addOneLike(event)
+  })
 
   toyDiv.append(newToy)
   newToy.append(h2, image, pgh, btn)
 }
 
 function submitNewToy(toyData) {
-  debugger
+  // debugger
   fetch("http://localhost:3000/toys", {
     method: "POST", 
     headers: {
@@ -59,13 +65,35 @@ function submitNewToy(toyData) {
       "Accept": "application/json"
     },
     body: JSON.stringify({
-      "name": toyData, 
-      "image": toyData
+      "name": toyData.name.value, 
+      "image": toyData.image.value,
+      "likes": 0
     })
   })
   .then(response => response.json())
-  .then(toy => {console.log(toy)
-  debugger
+  .then(toyObj => renderToys(toyObj)
+  )
+}
+
+function addOneLike(event) {
+  event.preventDefault()
+  let plusOne = parseInt(event.target.previousElementSibling.innerHTML) + 1
+
+  fetch(`http://localhost:3000/toys/${event.target.id}`, {
+    method: "PATCH", 
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify({
+      "likes": plusOne
+    })
+  })
+  .then(response => response.json())
+  .then(updateLikeObj => {
+    event.target.previousElementSibling.innerText = `${plusOne} Likes`
   })
 }
+
+
 
